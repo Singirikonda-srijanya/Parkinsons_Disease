@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="PPE <= 0.104\nentropy = 0.799\nsamples = 136\nvalue = [33, 103]\nclass = Yes"] ;
+1 [label="entropy = 0.0\nsamples = 14\nvalue = [14, 0]\nclass = No"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="spread1 <= -5.589\nentropy = 0.624\nsamples = 122\nvalue = [19, 103]\nclass = Yes"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="MDVP:Fo(Hz) <= 117.986\nentropy = 0.866\nsamples = 66\nvalue = [19, 47]\nclass = Yes"] ;
+2 -> 3 ;
+4 [label="Shimmer:DDA <= 0.025\nentropy = 0.863\nsamples = 14\nvalue = [10, 4]\nclass = No"] ;
+3 -> 4 ;
+5 [label="entropy = 0.0\nsamples = 7\nvalue = [7, 0]\nclass = No"] ;
+4 -> 5 ;
+6 [label="entropy = 0.985\nsamples = 7\nvalue = [3, 4]\nclass = Yes"] ;
+4 -> 6 ;
+7 [label="MDVP:Fhi(Hz) <= 240.171\nentropy = 0.665\nsamples = 52\nvalue = [9, 43]\nclass = Yes"] ;
+3 -> 7 ;
+8 [label="MDVP:Fhi(Hz) <= 147.238\nentropy = 0.433\nsamples = 45\nvalue = [4, 41]\nclass = Yes"] ;
+7 -> 8 ;
+9 [label="MDVP:Shimmer(dB) <= 0.142\nentropy = 0.946\nsamples = 11\nvalue = [4, 7]\nclass = Yes"] ;
+8 -> 9 ;
+10 [label="entropy = 0.0\nsamples = 6\nvalue = [0, 6]\nclass = Yes"] ;
+9 -> 10 ;
+11 [label="entropy = 0.722\nsamples = 5\nvalue = [4, 1]\nclass = No"] ;
+9 -> 11 ;
+12 [label="entropy = 0.0\nsamples = 34\nvalue = [0, 34]\nclass = Yes"] ;
+8 -> 12 ;
+13 [label="entropy = 0.863\nsamples = 7\nvalue = [5, 2]\nclass = No"] ;
+7 -> 13 ;
+14 [label="entropy = 0.0\nsamples = 56\nvalue = [0, 56]\nclass = Yes"] ;
+2 -> 14 ;
+}

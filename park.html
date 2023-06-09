@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+ <meta charset="UTF-8">
+ <title>PREDICTION</title>
+ <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'
+type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet'
+type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet'
+type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'
+rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../static/css/park1.css">
+</head>
+<body>
+    <div class="login">
+    <h1>Parkinson's Disease Prediction Analysis  </h1>
+     {{prediction_text}}
+     <!-- Main Input For Receiving Query to our ML -->
+     
+     <form action="{{ url_for('predict')}}" method="post">
+    
+    
+    <input type="text" name="PPE" placeholder="ppe" required="required" />
+    <input type="text" name="DFA" placeholder="dfa" required="required" />
+    <input type="text" name="RPDE" placeholder="rpde" required="required"/>
+<input type="text" name="numPulses" placeholder="numpulses"
+required="required" />
+<input type="text" name="numPeriodsPulses"
+placeholder="numperiodpulses" required="required" />
+
+ <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+ <br>
+
+ </form>
+</div>
+</body>
+</html>
